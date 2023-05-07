@@ -1,29 +1,3 @@
-// function sendMail(e) {
-//   e.preventDefault();
-//   var params = {
-//     name: document.getElementById("fullname").value,
-//     email: document.getElementById("email_id").value,
-//     phone: document.getElementById("phone_number").value,
-//     message: document.getElementById("message").value
-//   };
-
-//   // const serviceID = "service_378x19n";
-//   // const templateID = "template_a5zi6n9";
-
-//   emailjs
-//   .send(
-//     "service_378x19n", "template_a5zi6n9", params)
-//   // document.getElementById("fullname").value;
-//   // document.getElementById("email_id").value;
-//   // document.getElementById("phone_number").value;
-//   // document.getElementById("message").value;
-//   .then((res) => {
-//     console.log(res);
-//     alert("Your message sent Successfully")
-//   })
-//   .catch((err)=>console.log(err));
-// }
-
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .navbar');
 
