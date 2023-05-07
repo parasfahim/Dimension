@@ -21,6 +21,17 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+      
+      <!-- JS LINK -->
+      <script src="main.js"></script>
+      <!-- <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init("uJchXaL13llgaB6Yr");
+    })();
+    </script> -->
 
       <!-- CONTACT FORM -->
       
@@ -44,7 +55,7 @@
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
-     <a target="_blank"  href='\portfolio/FINAL-PORTFPOLIO.pdf' class="btn-portfolio">Portfolio</a>
+     <!-- <a target="_blank"  href='\portfolio/FINAL-PORTFPOLIO.pdf' class="btn-portfolio">Portfolio</a> -->
       <span id="menu-btn" class="fas fa-bars"></span>
     </header>
     <!-- HEADER SECTION  END-->
@@ -379,34 +390,29 @@
     <p class="inner-content">example@gmail.com</p>
   </div>
     <div class="form">
-      <form class="book-form" target="_blank">
+      <form class="book-form" onsubmit="sendMail()">
         <div class="flex">
           <div class="inputBox">
             <span>Name:</span>
             <input type="text" id="fullname" name="name" placeholder="Enter Your Name"  required/>
-          </div>
 
-          <div class="inputBox">
             <span>Email:</span>
             <input type="email" id="email_id" name="email" placeholder="Enter Your Email"  required/>
-          </div>
 
-          <div class="inputBox">
-            <span>Contact No.:</span>
-            <input type="number" id="number" name="phone" placeholder="Enter Your Phone Number..."  required/>
-          </div>
+            <!-- <span>Contact No:</span>
+            <input type="text" id="phone_number" name="phone" placeholder="Enter Your Phone Number..." /> -->
 
-          <div class="inputBox">
             <span>Message:</span>
             <textarea type="text" id="message" name="message" placeholder="Type your message..." required></textarea>
+            
+            <button class="btn" onclick="sendMail()">Submit</button>
           </div>
-
+          <!--<button class="btn" onclick="sendEmail()">Submit</button>-->
         </div>
-        <button type="submit" class="btn" >Submit</button>
       </form>
     </div>
     </div>
-    </section>
+    </section>K
     
     </main>
   </section>
@@ -416,28 +422,39 @@
 
   <!-- FOOTER -->
 
+  <!-- JS LINK
+  <script src="main.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("i0wgOm2S1FVP40-3_");
+})();
+</script> -->
 
       <!--SWIPER JS LINK-->
       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-      
-      <script src="main.js"></script>
-
-      <script src = "https://smtpjs.com/v3/smtp.js"></script>
-      <script>
-        function SendEmail(){
-  Email.send({
-    Host : "smtp.gmail.com",
-    Username : "parasfahim26@gmail.com",
-    Password : "03432128821abc",
-    To : 'parasfahim26@gmail.com',
-    From : document.getElementById("email_id").value,
-    Subject : "You Got A Message From Website.",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-}
+      <script src="https://smtpjs.com/v3/smtp.js">
       </script>
+      <script>
+        function sendEmail(){
+          Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "parasfahim26@gmail.com",
+            Password : "**********EBE54",
+            To : 'parasfahim26@gmail.com',
+            From : document.getElementById("email_id").value,
+            Subject : "Subject",
+            Body : document.getElementById("message").value
+        }).then(
+          message => alert(message)
+        );
+        }
+      </script>
+      <!-- <script src="main.js"></script>
+
+      <script src = "https://smtpjs.com/v3/smtp.js"></script> -->
     </body>
   </html>
   

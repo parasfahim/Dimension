@@ -99,7 +99,7 @@
     color: var(--white);
   }
 
-  .btn-portfolio{
+  /* .btn-portfolio{
     display: flex;
     background: var(--black);
     margin-top: 1rem;
@@ -118,7 +118,7 @@
 
   .portfolio{
     display: flex;
-  }
+  } */
 
   body{
     background-image: url(\images/background.jpg);
